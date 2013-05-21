@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel=stylesheet type="text/css" href="kb2.css">
+<title>東方繰人形2 アリスといっしょ -Alice to Eternal-</title>
+</head>
+
+<body bgcolor="white" link="blue" alink="blue" vlink="blue">
+
+<hr>
+
+<h1 class="main" align="center">東方繰人形2 アリスといっしょ -Alice to Eternal-</h1>
+
+<!--レイアウトのためのテーブル開始-->
+<table width=550 align="center"><tr><td>
+
+<hr>
+<h1>目次</h1>
+<p>
+<a href="thkb2_top.html">はじめに</a><br>
+<a href="thkb2_1.html">1.ひとまずトゥルーエンドに向けて</a><br>
+<a href="thkb2_2.html">2.選択肢一覧表</a><br>
+<a href="thkb2_3.html">3.バトルデータ</a><br>
+<a href="thkb2_4.html">4.エンディング分岐条件</a><br>
+<br>
+<a href="thkb2_last.html">あとがき</a><br>
+</p>
+
+
+<!--本文-->
+
+
+<hr>
+<p>
+<a href="thkb2_top.html">はじめに</a><br>
+<a href="thkb2_1.html">1.ひとまずトゥルーエンドに向けて</a><br>
+<a href="thkb2_2.html">2.選択肢一覧表</a><br>
+<a href="thkb2_3.html">3.バトルデータ</a><br>
+<a href="thkb2_4.html">4.エンディング分岐条件</a><br>
+<a href="thkb2_last.html">あとがき</a><br>
+<br>
+<a href="../index.html">TOPへ</a><br>
+<br>
+</p>
+
+</td></tr></table>
+<!--レイアウトのためのテーブル終了-->
+
+<hr>
+
+</body>
+
+</html>
