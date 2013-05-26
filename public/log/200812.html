@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<link rel="stylesheet" href="diary.css" type="text/css">
+<title>2008-12</title>
+</head>
+<body>
+<h1 class="diary_month">2008-12</h1>
+<hr>
+<a href="./" class="diary">戻る</a>
+<hr>
+<a name="07"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-07T02:10:12 (Sun)</h2>
+<h2 class="diary_title">絵を描く</h2>
+<div class="diary_body">
+事実上去年諦めたことなのですが，今日 Twitter で会話しててもう一度挑戦してみようかな，と… (´ω｀)<br>
+<br>
+今の自分の本音は<a href="http://twitter.com/ka_/status/1042182797" target="_blank">この POST</a> にほぼ完全に凝縮されています．<br>
+<br>
+卒研が終わったら，本を買います．<br>
+<br>
+<a href="http://illust.g.hatena.ne.jp/aki426/20080524/1211613240" target="_blank">「絵の描き方本」リストアップ</a> このエントリを紹介して下さった，というよりエントリを書いた本人の aki426 さんに感謝です．<br>
+<br>
+春休みに，完全に 0 から勉強・練習し直そうと思います．<br>
+</div>
+<h3 class="diary_comment_header">comments</h3>
+<div class="diary_comment">
+<h3 class="diary_comment_author">萩 (2008-12-08T00:10:41)</h3>
+<div class="diary_comment_body">
+人物のデッサン技法だけ持ってたり＞＜<br>
+絵を描く友達が言うには、あーいった本は見てるだけで面白いそうな。<br>
+ぼくも練習しよう＞＜<br>
+</div>
+<h3 class="diary_comment_author">か (2008-12-08T03:19:22)</h3>
+<div class="diary_comment_body">
+練習あるのみだよね (^^<br>
+<br>
+そして練習というのは効率良くやらないと絶対途中で投げ出しちゃうから，とっても上手な人が書いた (であろう) こういう本に今度はきちんと頼ろうと思うんだ (^^<br>
+</div>
+</div>
+</div>
+<a name="13"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-13T02:29:10 (Sat)</h2>
+<h2 class="diary_title">最近は書くネタが無い</h2>
+<div class="diary_body">
+とは言えたまにこうして何か書いておかないと放置がデフォになってしまうｗ<br>
+<br>
+ここに書くネタが無いのは主に学校の研究の方が忙しいからです．<br>
+<br>
+下手すると 2 月頃までこんな風な 1 週間 1 エントリ体勢が続くかもしれません (´ω｀)<br>
+<br>
+あ，でもコミケ終了後の年始は別かもｗ<br>
+</div>
+</div>
+<a name="14"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-14T04:06:41 (Sun)</h2>
+<h2 class="diary_title">ついったー部にひだまり部が出来ました</h2>
+<div class="diary_body">
+<a href="http://twitter.g.hatena.ne.jp/keyword/%e3%81%b2%e3%81%a0%e3%81%be%e3%82%8a%e9%83%a8" target="_blank">ひだまり部</a><br>
+<br>
+作りました．サモ辺りは問答無用で入るがよい (^ω^)<br>
+</div>
+</div>
+<a name="18"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-18T04:27:30 (Thu)</h2>
+<h2 class="diary_title">Twitter bot をおうちの Linux マシンで動かす</h2>
+<div class="diary_body">
+結論から言うとまだ失敗してるんスけどね．<br>
+<br>
+以前 Vine 4.2 が入っていたマシンで Ruby の Twitter ライブラリが何が悪いのか分かりませんが動かなかったのです．で Vine は枯れすぎ (笑) だと Twitter で言われたのもあり，新たに今やたらと流行っている Ubuntu 8.10 を入れてそこで Ruby の Twitter ライブラリを使おうとしてみました．<br>
+<br>
+その結果報告．<br>
+<br>
+Ubuntu にはデフォルトで Ruby が入っていなかったのでまずはそれをインストール<br>
+<pre>sudo apt-get install ruby</pre><br>
+そして RubyGems を apt-get でインストール<br>
+<pre>sudo apt-get install rubygems</pre><br>
+そして gem を使って Twitter ライブラリをインストール<br>
+<pre>sudo gem install twitter</pre><br>
+そして次のようなスクリプトを実行<br>
+<blockquote>require 'rubygems'<br>
+require 'twitter'<br>
+<br>
+twit = Twitter::Base.new(<br>
+　'メールアドレス', 'パスワード'<br>
+)<br>
+<br>
+twit.timeline(:friends).each { |i|<br>
+　puts i.text<br>
+}</blockquote><br>
+以降，動作確認はこのスクリプトで行います．<br>
+<br>
+まぁ，とりあえずこれでは動きません (^^;<br>
+<br>
+で，<a href="http://d.hatena.ne.jp/tsx/" target="_blank">tsx</a> さんが「gem は手動で入れた方がいいかも」と教えてくれたので早速実行．<br>
+<br>
+<a href="http://rubyforge.org/projects/rubygems/" target="_blank">RubyForge: RubyGems: Project Info</a> から RubyGems 1.3.1 をダウンロード．展開してそのディレクトリに入り，以前覚えた知識に従ってインストール．<br>
+<pre>sudo ruby setup.rb</pre><br>
+どうも apt-get で取れる RubyGems は 1.2.0 のようで．何にせよ新しいのはいいことに違いありません (多分)．<br>
+<br>
+そして Twitter ライブラリも入れ直して再度テストスクリプト実行！<br>
+<br>
+しかし，エラーメッセージの内容が変わっただけで結局動きませんでした．一応エラーメッセージは以下の通り．<br>
+<blockquote>/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- net/https (MissingSourceFile)<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/httparty-0.2.2/lib/httparty.rb:4<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/twitter-0.3.8/lib/twitter/search.rb:2<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'<br>
+　from /usr/lib/ruby/gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'<br>
+　from /usr/lib/ruby/gems/1.8/gems/twitter-0.3.8/lib/twitter.rb:8<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:36:in `gem_original_require'<br>
+　from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:36:in `require'<br>
+　from main.rb:2</blockquote><br>
+何のこっちゃらサッパリです (ノω-)<br>
+<br>
+また何か実験してみたらメモ代わりに報告しようと思います．<br>
+</div>
+</div>
+<a name="21"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-21T04:56:38 (Sun)</h2>
+<h2 class="diary_title">Twitter bot をおうちの Linux マシンで動かす ～その 2～</h2>
+<div class="diary_body">
+Ruby ＼(^o^)／　状態になってたので，Python に浮気してみました．以前から触ってみたかった言語でもありましたし．<br>
+<br>
+とりあえず最終目標は現状で動いているゆのっち bot に機能的に追いつかせること．<br>
+<br>
+そのための第一段階として，「1. 発言を投稿する」「2. Replies を取得する」という目標をまずはクリアすることにしましょう．<br>
+<br>
+以前の Ruby よりやたらめったら簡単だったので書くことはほとんどありませんがｗ<br>
+<br>
+以降，環境は Ubuntu 8.10，Python のバージョンは 2.5.2 を前提にします．<br>
+<br>
+まず参考にしたのが以下のエントリたち．"python twitter" でググって現時点で一番上に出てきたブログです．<br>
+<a href="http://d.hatena.ne.jp/ama-ch/20080514/1210757894" target="_blank">python-twitterまとめ　～導入まで</a><br>
+<a href="http://d.hatena.ne.jp/ama-ch/20080519/1211178876" target="_blank">python-twitterで遊んでみた　基本編</a><br>
+<a href="http://d.hatena.ne.jp/ama-ch/20080520/1211335520" target="_blank">python-twitterのGetFriends()で100人以上取得する</a><br>
+(<a href="http://d.hatena.ne.jp/ama-ch/" target="_blank">テックノート@ama-ch</a>)<br>
+<br>
+まず，「～導入まで」を読むといいと思います．<br>
+<br>
+そして「必要なもののダウンロード」ですが，python-twitter はエントリにある通りバージョン 0.5 のままですが，simplejson の方が 2.0.6 に今は上がっています．が，このバージョンを使っても問題なく動作は成功しました．<br>
+<br>
+あとは指示に従ってインストール．<br>
+<br>
+<blockquote>$ tar -xvzf simplejson-2.0.6.tar.gz<br>
+$ cd simplejson-2.0.6<br>
+$ sudo python setup.py install</blockquote><br>
+<blockquote>$ python<br>
+>>> import simplejson</blockquote><br>
+ここで何もエラーメッセージが出なければ OK．<br>
+<br>
+<blockquote>$ tar -xvzf python-twitter-0.5.tar.gz<br>
+$ cd python-twitter-0.5<br>
+$ sudo python setup.py install</blockquote><br>
+<blockquote>$ python<br>
+>>> import twitter</blockquote><br>
+ここでも何もエラーメッセージが出なければ完了．<br>
+<br>
+私が sudo を忘れたせいでインストールに一回失敗して焦ったとかいうのは内緒だぜ (ノω<)<br>
+<br>
+sudo ってナニ？っていう数ヶ月前の私のような人は，root ユーザでログインし直してコマンドを実行するとよいでしょう (Ubuntu ならそんなんありませんが)．<br>
+<br>
+後は先ほどのエントリにあるテストスクリプト (発言を投稿してみるものなど) を試してみればよいでしょう．これで目標の一つ，「投稿する」は完了です．<br>
+<br>
+さて，ここでもう一つの目標であった，Replies の取得にチャレンジします．何気にさっきのエントリには解説が無いのです．まぁ解説聞くまでもないってことだと言えばそうなんですが．<br>
+<br>
+まず，python-twitter のリファレンスは <a href="http://static.unto.net/python-twitter/0.5/doc/twitter.html" target="_blank">Python: module twitter</a> にあるので，何か調べたいときはここを見るようにします．英語ですが，先ほどのブログの筆者も仰っている通り，短くて簡単なので大体の意味はとれますｗ<br>
+<br>
+あと Python そのものの入門として私は <a href="http://www.f7.ems.okayama-u.ac.jp/~yan/python/" target="_blank">Python入門</a>というページを参考にしました．<br>
+<br>
+んで，とりあえず Replies を取得して「アカウント名 : Reply の内容」という文字列で表示するには，以下のようなスクリプトを実行すれば OK．<br>
+<br>
+<blockquote>import twitter<br>
+api = twitter.Api("アカウント名", "パスワード")<br>
+for status in api.GetReplies():<br>
+　print "%s : %s" % (status.user.screen_name, status.text)</blockquote><br>
+これでずらっと Reply 一覧出てくるはず．ただし最新の 20 件限定ですが．<br>
+<br>
+ということで，Python で Twitter bot 入門 + ちょっと補習，でした．<br>
+<br>
+ほとんどさっきの人のブログで事足りるので書いても仕方ない感じはしましたが，まぁメモ代わりということも兼ねて (^^;　Web の中にまたつまらぬ駄文が増えてしまった…とか言わない！＞＜；<br>
+<br>
+明らかに蛇足みたいな説明が多々あるかと思いますが，まぁ分かる人は各自そういうのは読み飛ばしてくりゃれ，ってことで＞＜<br>
+<br>
+[2008-12-21T05:57 追記]<br>
+<br>
+<a href="http://dotthx.com/dotthxblog/2008/11/twitter-botpythonapi.html" target="_blank">twitter-bot作成(1):PythonAPI編</a> (<a href="http://dotthx.com/dotthxblog/" target="_blank">.thx.log</a>)<br>
+<br>
+Replies の取得に関してもっと見易く詳しく書いているエントリ発見＞＜；　やっぱり私がエントリ書く必要なんてなかったじゃん！＞＜；；<br>
+<br>
+いいもん！メモ代わりだもん！＞＜。<br>
+</div>
+</div>
+<a name="22"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-22T00:04:01 (Mon)</h2>
+<h2 class="diary_title">さくらインターネットに vim をインストール</h2>
+<div class="diary_body">
+<a href="http://www.misho-web.com/" target="_blank">みしょ</a>さんの日記の <a href="http://www.misho-web.com/diary/200812.html#Diary12" target="_blank">2008-12-12 のエントリ</a>によればさくらインターネットのレンタルサーバに vim (とか他にも色々) をインストールすることが出来るらしいとのこと．早速調べて私もやってみました．<br>
+<br>
+<a href="http://www.hazama.nu/t2o2/archives/002696.html" target="_blank">さくらインターネットの共用サーバに vim をインストールする</a> (<a href="http://www.hazama.nu/t2o2/" target="_blank">talk to oneself 2</a>)<br>
+<br>
+基本的にこのエントリのコマンドを真似するだけでインストール出来ます．が，バージョンが少し違ったりするところもあるのでそこを補足．<br>
+<br>
+この人がインストールした時点での最新バージョンは 7.0 でしたが，今の最新バージョンは 7.2 です．<br>
+<br>
+<a href="ftp://ftp.vim.org/pub/vim/unix/" target="_blank">ftp://ftp.vim.org/pub/vim/unix/</a><br>
+<br>
+ここを見て最新バージョンをチェックしましょう．そして適宜 wget コマンドの引数を変更しましょう．<br>
+<br>
+<a href="ftp://ftp.vim.org/pub/vim/extra/" target="_blank">ftp://ftp.vim.org/pub/vim/extra/</a><br>
+<a href="ftp://ftp.vim.org/pub/vim/patches/7.2/" target="_blank">ftp://ftp.vim.org/pub/vim/patches/7.2/</a><br>
+<br>
+そしてパッチ等もその最新バージョンを考慮した URL を打ち込みます．7.2 の現時点での最新パッチは 069 でした．<br>
+<br>
+<a href="http://www.big.or.jp/~crane/cocoa/0800_internet/curl/" target="_blank">curlの使い方</a><br>
+<a href="http://www.linux.or.jp/JM/html/GNU_patch/man1/patch.1.html" target="_blank">Manpage of PATCH</a><br>
+<br>
+パッチの充て方のところで curl と patch という初めて見るコマンドが出てきたので以上のページで調査．<br>
+<br>
+一連のコマンドをまとめると以下の通り．<br>
+<br>
+<blockquote>% mkdir -p $HOME/local/src<br>
+% cd $HOME/local/src<br>
+<br>
+% wget ftp://ftp.vim.org/pub/vim/unix/vim-7.2.tar.bz2<br>
+% wget ftp://ftp.vim.org/pub/vim/extra/vim-7.2-extra.tar.gz<br>
+% wget ftp://ftp.vim.org/pub/vim/extra/vim-7.2-lang.tar.gz<br>
+<br>
+% tar jxf vim-7.2.tar.bz2<br>
+% tar zxf vim-7.2-extra.tar.gz<br>
+% tar zxf vim-7.2-lang.tar.gz<br>
+% cd vim72<br>
+<br>
+% mkdir patches<br>
+% cd patches<br>
+% curl -O 'ftp://ftp.vim.org/pub/vim/patches/7.2/7.2.069'<br>
+<br>
+% cd ..<br>
+% cat patches/7.2.069 | patch -p0<br>
+<br>
+% ./configure --enable-multibyte --enable-xim --enable-fontset \<br>
+? --with-features=big --prefix=$HOME/local<br>
+% make<br>
+% make install<br>
+</blockquote><br>
+ちなみに以前 Boost のインストール時にも書いたと思いますが，UNIX や Linux でソースコードからアプリケーションをインストールするときは ./configure → make → make install の流れでコマンドを実行します．./configure でインストールのための設定を行い，make でソースコードをバイナリファイルに作り上げ，make install で設置します．だいたいそういう雰囲気です．<br>
+<br>
+とは言えこれは最終手段なので，普通はパッケージ管理ソフトを使いましょう (yum とか apt-get とか)．何故かというとアンインストールが簡単に出来なくなるので (ノω-)<br>
+<br>
+インストール完了後はシェルの設定をします．$HOME/.cshrc を指示通り編集します．ここは各自のお好みで．分からなければ丸写しで．<br>
+<br>
+<a href="http://www.kawaz.jp/pukiwiki/index.php?vim#cb691f26" target="_blank">ずんWiki - vim 文字コードの自動認識</a><br>
+<br>
+最後に，日本語表示に対応するためにここの内容を .vimrc というファイルにコピーして，FTP でアップします．文字コードを ShiftJIS で改行コードを CR + LF にすると .vimrc 読み込み時にエラーが出たので，EUC と LF にします．これでエラーが出なくなります．<br>
+<br>
+ちなみに .vimrc は $HOME/ に置いておきます．<br>
+<br>
+<s>とは言っても文字化けは直らなかったわけですが (ノ∀`)　またそのうち直す方法が分かったら追記します．</s><br>
+<br>
+[追記 2009-04-09T15:38]<br>
+<br>
+<a href="http://kaosf.kirara.st/sb/log/eid140.html" target="_blank">コマンドプロンプト + telnet で EUC な文字を見る方法</a><br>
+<br>
+一応これで文字化けは直せます．しかしさくらインターネットはレンタルサーバの一部の FreeBSD 7.1 を採用しているマシンで <a href="http://www.sakura.ad.jp/news/archives/20090216-002.news" target="_blank">telnet への対応を打ち切る</a>らしいので，<a href="http://support.sakura.ad.jp/support/manual/rs/tech_ssh.shtml" target="_blank">こちら</a>を参考にして SSH で接続する手段を確保するのがよろしいかと思われます．<br>
+<br>
+[追記ここまで]<br>
+<br>
+ところでホームディレクトリを ~/ といつも書いているのに $HOME/ と書いたのに深い意味はありません (ノω<)　参考にしたブログに影響されたってことで．<br>
+</div>
+</div>
+<a name="22"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-22T00:18:41 (Mon)</h2>
+<h2 class="diary_title">コマンドプロンプト + telnet で EUC な文字を見る方法</h2>
+<div class="diary_body">
+<a href="http://matatabi.homeip.net/blog/setomits/284/m_entry_html" target="_blank">WindowsのコマンドプロンプトでEUCを表示する</a><br>
+<br>
+教えて下さったのは <a href="http://d.hatena.ne.jp/tsx/" target="_blank">tsx</a> さん．ありがとうありがとう (ノω<)<br>
+</div>
+</div>
+<a name="25"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-12-25T23:24:11 (Thu)</h2>
+<h2 class="diary_title">プログラム遅いです，えぇそれはもう (^^;</h2>
+<div class="diary_body">
+<a href="http://pgyougo.seesaa.net/article/111219575.html" target="_blank">プログラムが遅い人の10の特徴</a> (<a href="http://pgyougo.seesaa.net/" target="_blank">それほど間違ってないプログラマ用語辞典</a>)<br>
+<br>
+3 と 9 が当てはまりますね (^^;<br>
+</div>
+</div>
+<hr>
+<a href="./">戻る</a>
+<hr>
+</body>
+</html>

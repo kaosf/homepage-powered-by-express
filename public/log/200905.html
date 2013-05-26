@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<link rel="stylesheet" href="diary.css" type="text/css">
+<title>2009-05</title>
+</head>
+<body>
+<h1 class="diary_month">2009-05</h1>
+<hr>
+<a href="./" class="diary">戻る</a>
+<hr>
+<a name="01"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-01T03:21:16 (Fri)</h2>
+<h2 class="diary_title">Squirrel エディタ</h2>
+<div class="diary_body">
+xyzzy でソースを書いていたのですが完全にただのテキストエディタとしてしか機能しない (せいぜいあるのはキーバインドによるカーソル移動程度 (^^;) ので，早くも苦痛になってきましたｗ<br>
+<br>
+弱いなーｗ　とも思うのですが，Eclipse が一応開発環境になるとの話は聞いていたので最低限ソースコードエディタとして使えるようにしてみようと英語サイトと格闘 (と言う程でも無かったけど) しました．<br>
+<br>
+結果，キーワードの色変え + オートインデントが出来るエディタとしては使えるようになりました．<br>
+<br>
+参考にしたのは<a href="http://wiki.squirrel-lang.org/default.aspx/SquirrelWiki/SQDEV.html" target="_blank">ココ</a> (英語) です．ここの Installing SQDev の項の手順をなぞります．<br>
+<br>
+ちなみに私の Eclipse のバージョンは 3.4.1 (GANYMEDE) です．当然それでしか試してません．他のバージョンだとどうなるのか分かりません．ご了承下さい．<br>
+<br>
+また Eclipse のインストールに関しては <a href="http://eclipsewiki.net/eclipse/" target="_blank">EclipseWiki</a> のインストールの項が分かりやすくて良いでしょう．<br>
+<br>
+ということで恒例の手順メモを．<br>
+<br>
+<blockquote>Eclipse のメニューバー > ヘルプ > ソフトウェア更新 > 使用可能なソフトウェアタブ > サイトの追加 > (ここでダイアログボックスが新しく開く) > ロケーションの部分に <strong>http://sqdev.sf.net/update/</strong> を入力し OK<br>
+<br>
+左のウィンドウに http://sqdev.sf.net/update/ という項目が追加されているはずなのでそれを開く > SQDev が出てくる それも開く > Squirrel Development Tools 1.2.8 が出てくる それをチェックする<br>
+(※http://sqdev.sf.net/update/ をチェックしても OK．とにかく http://sqdev.sf.net/update/ 以下の 3 つが選択されてれば OK．まぁここは雰囲気で分かって下さい (^^;)<br>
+<br>
+インストール > (新しいダイアログボックスが開く) > 次へ > 「同意します」をチェックして「完了」 > “再起動しますか？”と聞かれるので一応「はい」<br>
+</blockquote><br>
+以上です．後は「ソースを開く」なりソースファイルのドラッグ＆ドロップなりでエディタとして機能します．<br>
+<br>
+※Eclipse 起動後最初にソースを開いたときに「問題が発生」「'Build Squirrel Projects' に問題が発生しました。云々」というエラーが出ます．しかしとりあえずエディタとして使うことは出来るので気にしないことにしましょう．<br>
+<br>
+IDE のように使うことも出来るのかもしれませんが，C++ コードの方は Visual C++ で管理しているので多分色々面倒臭そう，という予感がするので今はやめておきます (ノω-)<br>
+<br>
+[追記 2009-05-01T04:11]<br>
+<br>
+今にして思えば「オートインデント + キーワード色変え」程度なら <a href="http://www.mk-square.com/" target="_blank">MKEditor</a> で良かったかも知れませんね．これなら自分でオリジナルに .nut ファイルを Squirrel モードとかにして，キーワード追加して色変えたり強調表示したりを設定出来ますし．予約語なら <a href="http://wikiwiki.jp/lua/?Squirrel" target="_blank">Squirel - Lua/組み込み系言語 Wiki</a> の<a href="http://wikiwiki.jp/lua/?Squirrel_Lang%2Fch2#j87ebac7" target="_blank">第 2 章　言語 > キーワード</a>に載ってますし…<br>
+<br>
+ちなみに私は Eclipse で C-i, C-k, C-j, C-l に上下左右のカーソルキーを割り当てています．C-a, C-e には Home と End を割り当て，C-a に元から割り当てられている全てを選択は Shift + Alt + A に割り当てています．割り当てには<a href="http://mayu.sourceforge.net/" target="_blank">窓使いの憂鬱</a>というアプリケーションを使っています．<br>
+<br>
+まぁ要するに Eclipse を使わなくても良かったよね，ってことと，xyzzy のようなキーバインドによるカーソル移動を捨てたわけではありませんよ，ということで (^^;<br>
+<br>
+また気が向いたら MKEditor での設定方法も調べてまとめよう + 設定ファイルアップしようかな (と，ゲーム作りという本来の目的からどんどん外れていく… orz)<br>
+</div>
+</div>
+<a name="04"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-04T06:33:18 (Mon)</h2>
+<h2 class="diary_title">ヴァイスシュヴァルツで初対戦</h2>
+<div class="diary_body">
+ようやくプレイヤー仲間が出来たので本日初対戦しました．<br>
+<br>
+で，とりあえず現時点で出た結論としては「ヴァイス＝運ゲー」という割とどうしようもないものでしたｗ<br>
+<br>
+クライマックスカードを多く仕込ませると最後の方はいかにそれを引いてダメージを無効化するかにばかり尽力する戦いに…<br>
+<br>
+しかしクライマックスが少なければ少ないでいかにソウルの強いカードを引けるかのこれまた運ゲーな感じ…<br>
+<br>
+どうしたもんやらｗｗｗｗ<br>
+<br>
+あ，ちなみにもう 1 BOX + トライアルデッキ 1 つを買い足しました (^ω^)<br>
+<br>
+アホっスねｗｗｗｗ<br>
+</div>
+</div>
+<a name="06"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-06T23:37:43 (Wed)</h2>
+<h2 class="diary_title">ヴァイスはもう単品購入だけにします</h2>
+<div class="diary_body">
+結局色々とそそのかされて & 自分の弱い意志によって BOX を更に 1 つ買い足しました．2 つ目のデッキ構築する気マンマンっスねｗ<br>
+<br>
+というか，今はらき☆すたトライアルデッキを割とそのまま使ってる感じなので，どう見ても双子デッキなのです．ひよりんやこーちゃん先輩好きとしては青と黄色のオタクデッキを構築したいところ．<br>
+<br>
+ちなみに，カードの種類自体はプロモーションカードとホロカードを除けばコンプリート出来ました．プロモーションカードも 107 の「おでかけこなた」さえ手に入れればコンプ出来ます．<br>
+<br>
+大会やライブの参加賞のプロモーションカードは，カードショップで購入しましたｗ<br>
+<br>
+どんだけお金使ってるんだ…<br>
+<br>
+まぁアケマスに比べれば可愛いもんっスよ (^ω^)　なんてったってあっちは 1 ユニットが 1 BOX を上回りますからねｗ (←ダメ発想<br>
+<br>
+と言ってもスリーブやバインダーも含めてまだ 25k 程度しか使っていません．娯楽の費用としてこれを高いと考えるかどうかは人それぞれですが，私は別に高くはないと思ってます．<br>
+</div>
+<h3 class="diary_comment_header">comments</h3>
+<div class="diary_comment">
+<h3 class="diary_comment_author">紀行 (2009-05-07T01:47:21)</h3>
+<div class="diary_comment_body">
+カードゲームするなら25kとかあっという間だよね<br>
+</div>
+<h3 class="diary_comment_author">か (2009-05-07T10:47:11)</h3>
+<div class="diary_comment_body">
+だよねｗ　まったく恐ろしいもんです (´ω`)<br>
+</div>
+<h3 class="diary_comment_author">サモ (2009-05-13T21:26:57)</h3>
+<div class="diary_comment_body">
+ワシのカードゲーム費用は１０８ｋあるぞ<br>
+</div>
+<h3 class="diary_comment_author">か (2009-05-15T00:12:30)</h3>
+<div class="diary_comment_body">
+もうやめて！とっくにヴァイス(笑)は値段が下がってきてるのよ！ (…と 1 年後くらいに言ってそう<br>
+</div>
+</div>
+</div>
+<a name="10"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-10T08:43:13 (Sun)</h2>
+<h2 class="diary_title">今までどのくらいプログラミング言語を触ってきたか(3秒で挫折したものものも含む)</h2>
+<div class="diary_body">
+<a href="http://d.hatena.ne.jp/oorexx/20090507/1241703786" target="_blank">今までどのくらいプログラミング言語を触ってきたか(3秒で挫折したものものも含む)</a> (<a href="http://d.hatena.ne.jp/oorexx/" target="_blank">King of Programming Language - Open Object REXX blog for Japanese</a>)<br>
+<br>
+可能な限り時系列順に並べてみようと思います．<br>
+<br>
+BASIC<br>
+C<br>
+C++ (runtime)<br>
+Java<br>
+Perl<br>
+Ruby<br>
+JavaScript<br>
+bash<br>
+Emacs Lisp<br>
+Z80<br>
+DOS バッチ<br>
+C#<br>
+D<br>
+Python<br>
+zsh<br>
+Lua<br>
+Squirrel<br>
+Visual Basic<br>
+C++ (compiletime)<br>
+<br>
+一番最初の BASIC については何度か語ったことがありますが，数学の教科書に載っていたものを見て覚え，紙にプログラミングして自分でインタプリトしてましたｗ　紙上で基本的な数学ライブラリを作りました．<br>
+<br>
+C++ の C++ (runtime) と C++ (compiletime) の違いは，普通の C++ とテンプレートメタプログラミングの C++ です．<br>
+<br>
+簡単な感想として，やっぱり関数型がさっぱり触れてないのはどうだろうなぁ，とｗ (^^;　今年度中に Scheme と Haskell を使ってみたいです．<br>
+<br>
+他の人の同じ内容の日記 (一部)<br>
+<br>
+<a href="http://d.hatena.ne.jp/faith_and_brave/20090508/1241747936" target="_blank">Faith and Brave - C++で遊ぼう (アキラさん)</a><br>
+<a href="http://d.hatena.ne.jp/repeatedly/20090509/1241878643" target="_blank">はてなかよっ！ (repeatedly さん)</a><br>
+</div>
+</div>
+<a name="12"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-12T23:55:58 (Tue)</h2>
+<h2 class="diary_title">らき☆すたのクレジットカード</h2>
+<div class="diary_body">
+<a href="http://www.orico.co.jp/merchant/luckystarcard/index.html" target="_blank">らき☆すたのクレジットカード誕生！</a><br>
+<br>
+クレジットカードは現在 2 つ持っています．元 Amazon のカードである CITI カードと，三菱東京 UFJ 銀行のカードです．<br>
+<br>
+CITI カードは確か再来年辺りから年会費が有料になってしまうので早いところ解約するとして (※過去 2, 3 度解約しようと電話したけど全て回線混雑で繋がらなかったの…)，UFJ のカードはポイントが割と酷くなってしまったのでメインで使いたくなくなって来ました．<br>
+<br>
+そこでらき☆すたクレジットカード．<br>
+<br>
+初年度は年会費無料で 2 年目以降は 1,312 円の年会費が掛かりますが，ショッピングでの利用が 1 回でもあれば年会費は無料になります．Amazon を頻繁に利用する身としては実質無料です．<br>
+<br>
+以前出たアイマスのクレジットカードと同じく，リボ払い限定という一歩間違えれば怖いカード (限度額を超えれば超えた分が利息ついて翌月以降に繰り越される) ですが，要は超えなきゃいいのです．大体，今も UFJ のクレジットカードは月に多くても 2 万円程度しか使っていませんし．<br>
+<br>
+で，EMOBILE の料金支払いをこちらに変更してやれば毎月利用明細書は貰えるので，オリジナルプレミアムカードも恐らくコンプ出来るでしょう．<br>
+<br>
+しかし問題はその図柄です…　全 8 種ではひよりん居ない可能性もありますよね…　こーちゃん先輩はきっと諦めるしかない．いっそのこと全 50 種くらいにしてくれれば良かったのに…<br>
+<br>
+というわけで，申し込むかどうかを迷っていたり (^^;　第一これよりももっと得なカードも探せば出てきそうですし，悩みどころです．例えばヨドバシカメラのカードとか．<br>
+</div>
+<h3 class="diary_comment_header">comments</h3>
+<div class="diary_comment">
+<h3 class="diary_comment_author">サモ (2009-05-21T18:33:43)</h3>
+<div class="diary_comment_body">
+アイマスクレカの恐ろしいところは特典だろ・・・<br>
+<br>
+７０万使って５０円切手セットくれるんだぜ・・・<br>
+</div>
+<h3 class="diary_comment_author">か (2009-05-21T20:06:43)</h3>
+<div class="diary_comment_body">
+それが本当ならボッタクリとか言うレベルじゃねーですね．<br>
+<br>
+恐らく，本当にクレカで 70 万円分を使用した人へのご褒美 (オクに流せ(笑)的な意味で) なのでしょう．<br>
+<br>
+70 万円使わなければ貰えない切手なら数万円程度の値が付くはず．<br>
+</div>
+</div>
+</div>
+<a name="15"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-15T04:44:43 (Fri)</h2>
+<h2 class="diary_title">多分 1 年ぶりくらいに絵を描いた</h2>
+<div class="diary_body">
+サークルカットを．<br>
+<br>
+当選出来たら 7 月 5 日のらき☆すたオンリーイベント「陵桜祭 7」でKUSO☆ゲーを撒き散らして来ます．<br>
+<br>
+で，当選するためには参加申し込みをしなくてはならないわけで，参加申し込みをするにはサークルカットを描かなければならないわけで．<br>
+<br>
+正直自分は全然絵が描ける方じゃないので，出来ることならあまり描きたくはないのだけれど，この辺に微妙な心理がありまして…<br>
+<br>
+描けないんだけど，だからと言ってこのように必要に迫られたときに，安易に描かない方向には逃げたくないんです．ときどき文字だけのサークルカットとかを見ますが，得てしてハードウェアだったり何らかの考察だったり，おおよそマンガ・アニメの二次創作とは関係の薄いものです．<br>
+<br>
+マンガ・アニメの二次創作で出るんだったらイラストくらい描かなきゃ！＞ヮ＜　…という微妙な信念みたいなものがありまして，一応描くわけですが…<br>
+<br>
+で，わざわざ描くくらいなので，本来描くこと自体が嫌いというわけではないのです．<br>
+<br>
+ですが，そうやって自分が描いた絵は嫌いです．どうしても所謂「黒歴史」な絵になってしまうので… orz<br>
+<br>
+だから結局描くことが続かないんですよね．うーん，悪循環ｗ<br>
+<br>
+春休みに一度真剣に勉強するかー，なんて言っていましたが実際それどころではありませんでした．Squirrel のスタックの動作を解明するのがやっとでした．<br>
+<br>
+描かない方向に逃げたくない，描くことは嫌いではない，けど描いたものが好きになれない…<br>
+<br>
+誰かこの心理に共感してくれる人居ない？ｗ (^^;<br>
+<br>
+あー，上手い人に 1 ヶ月くらいリアルで付きっ切りで練習を見てもらってフィードバックを貰いたいものだ orz<br>
+</div>
+<h3 class="diary_comment_header">comments</h3>
+<div class="diary_comment">
+<h3 class="diary_comment_author">hagi (2009-05-15T11:59:26)</h3>
+<div class="diary_comment_body">
+サークルカットUP!!!<br>
+</div>
+<h3 class="diary_comment_author">か (2009-05-15T15:16:18)</h3>
+<div class="diary_comment_body">
+pixiv にうｐったよん<br>
+</div>
+</div>
+</div>
+<a name="19"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-19T01:28:56 (Tue)</h2>
+<h2 class="diary_title">辛い一週間</h2>
+<div class="diary_body">
+英語の論文を 1 本自分で学会誌から探して選んで読んで，内容を理解して全部和訳してゼミで発表しなければなりません．そのゼミが木曜日に差し迫ってまいりました．<br>
+<br>
+耐えろ…　耐えるんだ自分…！<br>
+<br>
+とりあえず論文を選ぶところまでは終わりました．色んな論文の ABSTRACT (論文の概要) を読むだけでも重労働なのです… orz　大抵 1 つの ABSTRACT 読むのに 20 回くらいは辞書引いて，意味を噛み砕きながら読むので結果 15 分くらいかかるのです．<br>
+<br>
+木曜日まで強く生きて行きたいですね．<br>
+<br>
+そして願わくばゼミが終了するとき，研究室の一同に私の英語力について絶望して頂きたいです．そうすれば後は評価は上がるだけだからｗ<br>
+</div>
+</div>
+<a name="21"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-21T20:01:34 (Thu)</h2>
+<h2 class="diary_title">英語＼(^o^)／終了</h2>
+<div class="diary_body">
+本日未完成の和訳を持ってゼミに出て「すみません出来ませんでした」と発表したら色々あって結果的にやり直しになりました．<br>
+<br>
+で，担当の先生の意見としては「君は英語の構文からまずは復習しなければいけないようだね」と．ハイ，その通りでございます．<br>
+<br>
+そういうわけで，一冊本を借りました．<br>
+<br>
+<a href="img/20090521.jpg"><img src="20090521.jpg" class="diary"><!-- 120x90 --></a><br>
+<br>
+多分研究室で自分が一番英語が出来ないと思います．で，先生曰く「英語が出来ないとどうしようもないからｗ　苦手なのは分かるけどそのまま放っておいてもどうしようもないんで自主勉強して下さい」だそうで．<br>
+<br>
+毎日コツコツやっていこうと思います (・ω・)　正直，英語が読めた方が色々と嬉しいですしね．Squirrel にしてもそうです．リファレンスマニュアルの原文がスラスラ読めればどれだけ楽なことか…　とよく思いました．いずれ 3.x の安定版が出る日のためにも頑張ろうと思います．<br>
+</div>
+</div>
+<a name="24"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-24T21:06:44 (Sun)</h2>
+<h2 class="diary_title">らき☆すた痛油</h2>
+<div class="diary_body">
+何でも商品になっちゃうなぁ～，という昨今の流れをどうこう言いたいわけではありません．今回は．というかそんな話題今更っスよｗ<br>
+<br>
+<a href="http://alfalfa.livedoor.biz/archives/51467313.html" target="_blank">らき☆すたのエンジンオイル　におい付き☆</a> (<a href="http://alfalfa.livedoor.biz/" target="_blank">アルファルファモザイク</a>)<br>
+<br>
+なんと，かがみんがハブられてるのです．よくやった！みゆきさんのポジションや境遇をもっとよくするべき＞＜　かがみんの過剰な評価も少し抑圧するべきなのです．<br>
+<br>
+大体本来のキャラの序列…てか順番は 1.こなた 2.つかさ 3.かがみ 4.みゆき なんですがね．何故か公式 (コンプティーク等) でも 2 と 3 が入れ替わっちゃってる事態がここ 1 年くらい続いております．<br>
+<br>
+ん．いやまぁ，皆で仲良くってことねｗ　絡め易いのは分かるけど，こなかが以外も皆もっと考えようよ (´・ω・`) という感じでｗ<br>
+<br>
+[2009-05-25T01:27 追記]<br>
+<br>
+<a href="img/20090524.jpg"><img src="img/20090524.jpg" class="diary"><!-- 120x64 --></a><br>
+<br>
+画像使い回し噴いたｗｗｗｗｗｗｗｗ<br>
+</div>
+<h3 class="diary_comment_header">comments</h3>
+<div class="diary_comment">
+<h3 class="diary_comment_author">ひょうがー (2009-05-29T23:55:59)</h3>
+<div class="diary_comment_body">
+なんというかがみはぶりｗｗｗｗｗｗ<br>
+<br>
+<br>
+でもうちのオカンはかがみが一番かわいいって言ってたんだぜ(＾ω＾)(聞いてない)<br>
+</div>
+<h3 class="diary_comment_author">か (2009-05-30T05:15:22)</h3>
+<div class="diary_comment_body">
+おかんｗｗｗｗ (ノ∀`)<br>
+</div>
+</div>
+</div>
+<a name="25"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-25T03:18:04 (Mon)</h2>
+<h2 class="diary_title">食での失敗</h2>
+<div class="diary_body">
+一人暮らし始めて，今初めて「あぁ，『食』に関して失敗したなぁ…」と感じたことがあったので書き残しておきます．<br>
+<br>
+事の発端は先週の土曜日に東京へ車で遊びに来た両親．色々と食料を持ってきてくれて，その中にバナナ 1 房がありました．それを所謂バナナスタンドにかけていた (※これに引っ掛けておくと黒くなりにくい) のですが，5 本あるうちの 2 本しか食べずに今日まで過ごしてしまいました．<br>
+<br>
+そして今日の日付が変わって少しした頃．モリモリと学校の課題を片付けていると何やら台所の方で「ドサッ！」という今までに聞いたことのない音が．<br>
+<br>
+何だと思って覗いてみたら，なんとバナナが熟れて柔らかくなり過ぎて，自重で皮を付け根から引きちぎって 3 本全て落ちていましたｗｗｗｗ<br>
+<br>
+これはヤバイｗｗｗｗ　と思い，急いでそのバナナを食することに．…しかし熟れすぎて大変な柔らかさと甘さを醸し出し，しかもどことなく漂う発酵したような感じ…<br>
+<br>
+しかし夕食も当然ながら既に済ませていたので，3 本目を完食しようと口にほうばったときついに「…これ以上食べたら吐く…」と思いました．あの味で 3 本は相当にキツかったです．<br>
+<br>
+結局口に含んだバナナはそのまま便器へ．大便が流れるんだからただでさえ柔らかくなったバナナなら問題なく流れるだろう…　と思い流しました．<br>
+<br>
+いくらバナナスタンドにかけておくにしても 3 ～ 4 日で食べちゃいましょうね，ということを痛感しました，えぇ orz<br>
+</div>
+</div>
+<a name="27"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-27T23:45:36 (Wed)</h2>
+<h2 class="diary_title">久しぶりに面白そうな制限プレイ動画見つけた</h2>
+<div class="diary_body">
+<iframe width="312" height="176" src="http://ext.nicovideo.jp/thumb/sm2094065" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2094065">【ニコニコ動画】FFT風水術オンリー Pt.00 縛り説明＋風水士作成</a></iframe><br>
+<br>
+<iframe width="312" height="176" src="http://ext.nicovideo.jp/thumb/sm5230099" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm5230099">【ニコニコ動画】FFT白魔道士縛り Pt.00 縛り説明</a></iframe><br>
+<br>
+FFT の制限プレイ動画で，どちらも同じプレイヤーのものです．暇潰しに見ていこうと思います．暇なんて出来るのかどうか分かりませんが．<br>
+</div>
+</div>
+<a name="29"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-29T03:00:16 (Fri)</h2>
+<h2 class="diary_title">Squirrel 暗黙の第一引数になるテーブルについて</h2>
+<div class="diary_body">
+また酷く詰まったことがあったのでメモ．<br>
+<br>
+関数呼び出しに関することです．<br>
+<br>
+例えばある関数とあるクラスがあったとして，<br>
+<br>
+<blockquote>function func() {<br>
+　print(typeof(this));<br>
+}<br>
+<br>
+class Cls {<br>
+　constructor() {}<br>
+　function method() {<br>
+　　::func();<br>
+　　func();<br>
+　}<br>
+}<br>
+<br>
+local c = Cls();<br>
+c.method();<br>
+</blockquote><br>
+だったとします．さて，こいつの実行結果は<br>
+<br>
+<blockquote>table<br>
+instance<br>
+</blockquote><br>
+になります．2 つ目は table ではなく instance になります．ほんとここ (関数に関すること) には罠が多く潜んでいる気がしてなりません．<br>
+<br>
+1 つ目の func 実行は ::func(); であり，誤解を恐れずに書くなら roottable.func(); という形になっています (※当然 roottable なんて言う予約語は存在しませんし，roottable.func() と書いて実行してもエラーが出ます．ルートテーブルのスロット func にある関数を実行しましたよ，ということを強調したいためにこう表記しました．)．<br>
+<br>
+対して 2 つ目の func 実行は this.func(); です．<br>
+<br>
+Squirrel で関数を実行すると暗黙のうちに隠れた第一引数としてテーブルが渡されるということは，関数のバインド作業や Squirrel 関数の C++ 側での実行を行った方々には周知の事実だと思います．<br>
+<br>
+そこで渡されるその“テーブル”というのが，roottable.func() なら roottable であり，this.func() なら this であり，XXXX.func() なら XXXX になるのです．<br>
+<br>
+つまり func の中で typeof(this) を表示してみると，::func() だと渡されるテーブルはルートテーブルなので結果は table になります．しかし this.func() だと渡されるテーブルが this，すなわち Cls のインスタンスなので，結果は instance になるということです．<br>
+<br>
+…これを知らずにあるクラスのメソッド内でグローバルな関数を func() と書いて呼び出して，その関数内でルートテーブルを参照しようとして this の内容を見た日には…<br>
+<br>
+ああ，また 1 日消費したよ orz<br>
+</div>
+</div>
+<a name="30"></a>
+<div class="diary">
+<h2 class="diary_date_header">2009-05-30T05:15:51 (Sat)</h2>
+<h2 class="diary_title">陵桜祭７に当選しました</h2>
+<div class="diary_body">
+らき☆すたオンリー同人誌即売会<a href="http://makihime.org/luckystar/" target="_blank">陵桜祭７</a>に当選しました．<br>
+<br>
+何事も無くコツコツと作業が進めば 7 月 5 日には Squirrel で作ったとあるゲームが頒布されるはずです．<br>
+<br>
+何事かあった場合は…　まぁまたコミトレででも (--;<br>
+<br>
+<a href="http://aims.dna-softwares.com/" target="_blank">A.I.M.S.</a> から色々とゲームプログラミングの着想を得たものになってます．ということで必然的に出来上がるものもきっとミニゲーム集でしょう．<br>
+<br>
+DX ライブラリと C++ と Squirrel でいかほどのものが作れるのか (※しかも 1 ヶ月ちょっとで)，自分でも分かりません．今回でそれを確かめてみます．<br>
+</div>
+</div>
+<hr>
+<a href="./">戻る</a>
+<hr>
+</body>
+</html>

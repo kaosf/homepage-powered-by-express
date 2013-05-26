@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html" charset="utf-8">
+<link rel="stylesheet" href="diary.css" type="text/css">
+<title>2008-03</title>
+</head>
+<body>
+<h1 class="diary_month">2008-03</h1>
+<hr>
+<a href="./" class="diary">戻る</a>
+<hr>
+<a name="02"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-02T00:00:00 (Sun)</h2>
+<h2 class="diary_title">そうだったのか</h2>
+<div class="diary_body">
+<p class="diary">
+先日の日記にて静的ライブラリの作り方がググ〜っても仕方ない♪である旨をさりげなく書いてたのですが，その原因が分かった気がします．VC だと「スタティックライブラリ」なんですね．「静的ライブラリ」で検索してばっかりだったからろくにヒットしなかったようです．実際にさっきスタティックの方で検索してみたら MSDN の記事（作り方と使い方のチュートリアル）にもろヒットしましたｗ　そこに trino さんの指摘にもあったことですが，空のプロジェクトからではなく最初からスタティックライブラリを作らせる方法も書いてありましたｗ
+</p></div>
+</div>
+<a name="03"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-03T00:00:00 (Mon)</h2>
+<h2 class="diary_title">[腐]よく分かるオブジェクト指向</h2>
+<div class="diary_body">
+<p class="diary">
+オブジェクト指向の三大要素として挙げられる「カプセル化，継承，多態性」の中の「カプセル化」を Java で分かりやすく解説しようと思います．＞＜
+</p>
+<p class="diary">
+まずカプセル化というのは，データとそのデータの処理を一箇所で管理するということです．そこでクラスという概念が出来ました．
+</p>
+<p class="diary">
+class Excalibur {<br />
+}
+</p>
+<p class="diary">
+class YaoiHole {<br />
+}
+</p>
+<p class="diary">
+class Seme {<br />
+　Excalibur excalibur;<br />
+　public Excalibur getExcalibur() {<br />
+　　return excalibur;<br />
+　}<br />
+}
+</p>
+<p class="diary">
+class Uke {<br />
+　YaoiHole yaoiHole;<br />
+　public void insert(Excalibur excalibur) {<br />
+　　//アッー！<br />
+　}<br />
+}
+</p>
+<p class="diary">
+＜使用例＞<br />
+Seme seme;<br />
+Uke uke;<br />
+uke.insert(seme.getExcalibur()); //アッー！
+</p>
+<p class="diary">
+うん，もうここまで書いて飽きた (´・ω・｀)　普段ならこんなネタ即座にボツですが，せっかくの腐な祭なのでアップします．継承も多態性もネタはあるんだけど，気力がないのでまた気が向いたら書きます．
+</p></div>
+</div>
+<a name="09"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-09T00:00:00 (Sun)</h2>
+<h2 class="diary_title">真らき☆すた萌えドリル攻略</h2>
+<div class="diary_body">
+<p class="diary">
+楽にポイントを稼ぐ方法を考えてみました．
+</p>
+<p class="diary">
+魔方陣の難しいを選ぶ　→　問題を撮影して DS を閉じる　→　手計算で答えを求める　→　神速で答える　→　ウッウーウマウマ
+</p>
+<p class="diary">
+難易度「難しい」だと得点が「294000 / 平均回答時間」という式で出されます（<a href="http://www34.atwiki.jp/lucky_star_mirror/pages/33.html" target="_blank" class="diary">らき☆すた萌えドリル wiki</a> より）．ちなみに正解率100%は当然満たすべき条件とします．<s>これで仮に平均回答時間が 2 秒になったとしても，1 回で 1470 ポイントも入手出来ることになります．1 分程度かけて600 〜 700ポイント稼げるツンデレ判断よりもかなり高効率だと思います．</s>（追記）実際問題として平均回答時間 2 秒というのは不可能でしたｗ　本当に神速でやって 4 秒が精一杯だと思います（※ちなみにこの速度でやると高確率でミスる）．
+</p>
+<p class="diary">
+しかし，手計算の部分を自動化しないことにはツンデレ判断の方が早いかも知れません．というのも，難易度「難しい」は仮埋めをしなければ出来ない問題が出てくるからです．
+</p>
+<p class="diary">
+というわけで，プログラマとしての力を発揮するときです．魔方陣を解くプログラムを組みましょう＾＾　現在少女コーディング中...　組めたらアップしようと思います．
+</p>
+<p class="diary">
+ちなみに，ググっても真らき☆すた萌えドリル特化の魔方陣（4 * 4 で 和が 34 で空欄候補がランダム）を解くプログラムなんてそうそうありません．学術的過ぎるものや汎用性が高過ぎて使うの面倒臭そうなのばっかりです．
+</p>
+<p class="diary">
+（追記）そして，結局魔方陣を解くプログラムは上記の理由と面倒臭さのために凍結しました ＼(^o^)／
+</p></div>
+</div>
+<a name="10"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-10T00:00:00 (Mon)</h2>
+<h2 class="diary_title">東方永夜抄</h2>
+<div class="diary_body">
+<p class="diary">
+最近 <a href="http://www.geocities.co.jp/playtown/9563/" target="_blank" class="diary">dqmaniac</a> さんが東方永夜抄をやっている旨をよく日記に書いてて，それを読んで自分もまたやりたくなったのでやってみました．最近東方…というか STG をほとんど真面目にプレイしてなかったのでさすがに Extra 一発取りは難しいかなぁ…と思いつつ詠唱組でやってみたら一発余裕でした．スコア13億出してどうやら詠唱組ハイスコアも出したようです（どんだけ低かったんだと）．
+</p>
+<p class="diary">
+やはり3年前にアホみたいにやり込んで鍛えた永夜抄の能力はそう簡単には無くならないようです．
+</p>
+<p class="diary">
+無くなったのはやる気だけですね (ノ∀`)
+</p></div>
+</div>
+<a name="10"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-10T00:00:01 (Mon)</h2>
+<h2 class="diary_title">unsigned int と size_t とイテレータ</h2>
+<div class="diary_body">
+<p class="diary">
+STL の vector で，
+</p>
+<p class="diary">
+for (unsigned int i = 0; i < vec.size(); ++i) { /* ループ処理 */ }
+</p>
+<p class="diary">
+というような書き方を BCC ではしょっちゅう使っていましたが，これが VC だと警告を出されます．size メソッドの戻り値である size_t 型が 64 ビット対応していることが原因のようです．
+</p>
+<p class="diary">
+では素直にイテレータを使えば解決か？というとそう簡単でもありません．例えば
+</p>
+<p class="diary">
+for (unsigned int i = 0; i < vec.size(); ++i) {<br />
+　vec.at(i) = vec2.at(i);<br />
+}
+</p>
+<p class="diary">
+のように別の vector の要素と対応を取りながら処理をするような部分が非常に書き辛くなります．こりゃやってられん ／(^o^)＼　貴様のために，わしは宇宙塩を味噌ブリだぞ．許せる！って感じです．
+</p>
+<p class="diary">
+てことで，オプションの「64 ビット移植への対応」を「いいえ」にしましょうｗ　そもそも作ってるのが Win32 アプリケーションなので 64 ビット？シリマセーン ＼^o^／ てことで解決なのです (^o^)　だいたい 64 ビット対応なら int 型も 64 ビットになって然るべきだと思うのですがねぇ…　なんで size_t 型だけ…　この辺はコンパイラを作る人にならないと分からない事情があるのかしら？
+</p>
+<p class="diary">
+ここ数日ずっと VC のコンパイラの厳しさにヒーヒー言ってる気がします．警告の出方が BCC の比じゃなくてほんと大変ですわ．</s>
+</p>
+<p class="diary">
+（2008-04-11 追記） この内容には誤りがありました ＼(^o^)／　そもそも添え字に unsigned int を使うのがダメっぽいです．添え字には size_t を使うみたいです．修正した内容の記事は<a href="http://kaosf.kirara.st/log/200804.html#11" class="diary">コチラ</a>．
+</p></div>
+</div>
+<a name="10"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-10T00:00:02 (Mon)</h2>
+<h2 class="diary_title">sprintf と sscanf</h2>
+<div class="diary_body">
+<p class="diary">
+自分はこの関数が大好きなのですが，バッファオーバーフローがどうのこうのという理由で最近はあまり使われないのでしょうか？ VC でも sprintf_s や sscanf_s という独自の安全な関数が用意されていて，そちらの利用を推奨してきます．ちなみに sprintf はサイズチェックを行わないので snprintf を使うといいと学校でプログラムやってるときにどっかで聞いたような気がするのですが，どうやら snprintf は C の標準ではなく VC には入ってません．それ以外にも snprintf はチェックはするがエラー防止には本質的に関わらないとかいう記述も見つけてしまってさぁ大変，と言った感じ．
+</p>
+<p class="diary">
+この 2 つの関数と同等かそれ以上の働きを行い，使い勝手がこれに劣らず，標準になっている関数って C/C++ にありましたっけ？ C++ だけじゃなくて C でも出来るならなお良いです．
+</p></div>
+</div>
+<a name="10"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-10T00:00:03 (Mon)</h2>
+<h2 class="diary_title">FF4 のらき☆すた MAD 動画</h2>
+<div class="diary_body">
+<p class="diary">
+今ニコニコ動画で個人的に凄く注目してる作品がありまして，それがこれらの動画です．
+</p>
+<p class="diary">
+<a href="http://www.nicovideo.jp/watch/sm2283732" target="_blank" class="diary">(sm2283732) こなたとかがみのファイナルファンタジー4(仮)・第一話「旅立ち」</a><br />
+<iframe width="312" height="176" src="http://www.nicovideo.jp/thumb/sm2283732" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2283732">【ニコニコ動画】こなたとかがみのファイナルファンタジー4(仮)・第一話「旅立ち」</a></iframe>
+</p>
+<p class="diary">
+<a href="http://www.nicovideo.jp/watch/sm2341413" target="_blank" class="diary">(sm2341413) えふ☆すた(仮)・第二話「霧の谷の少女」</a><br />
+<iframe width="312" height="176" src="http://www.nicovideo.jp/thumb/sm2341413" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2341413">【ニコニコ動画】えふ☆すた(仮)・第二話「霧の谷の少女」</a></iframe>
+</p>
+<p class="diary">
+<a href="http://www.nicovideo.jp/watch/sm2484404" target="_blank" class="diary">(sm2484404) FF4のシナリオをらき☆すたでリメイクしてみた(仮)・第三話「水底の主」</a><br />
+<iframe width="312" height="176" src="http://www.nicovideo.jp/thumb/sm2484404" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2484404">【ニコニコ動画】FF4のシナリオをらき☆すたでリメイクしてみた(仮)・第三話「水底の主」</a></iframe>
+</p>
+<p class="diary">
+暗黒騎士のこなたや竜騎士かがみのイラストに，絶妙に共感出来るアレンジストーリーが実に良い味出してると思うのですが，どうでしょう？うｐ主には頑張って最後まで作り上げて欲しいです．
+</p></div>
+</div>
+<a name="13"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-13T00:00:00 (Thu)</h2>
+<h2 class="diary_title">Visual C++ 2005 Express Edition のコンパイラとリンカ爆発しろ</h2>
+<div class="diary_body">
+<p class="diary">
+ライブラリ作成時のコンパイルもプロジェクト作成時のコンパイルも，コンパイルに関しては完全無警告で全て終わるのです．が，その後リンクするときに膨大なエラーが出ます (^ω^)
+</p>
+<p class="diary">
+error LNK 2005: std::unk_unk は既に unk.lib (とか unk.dll) で定義されてます　←こんなんが80個くらい
+</p>
+<p class="diary">
+そんな関数作った覚えねぇーっつーの (^ω^)
+</p>
+<p class="diary">
+Visual C++ 2005 爆発しろです．もうほんと．何が悪いんじゃろ？ちなみに LNK 2005 でググって MSDN とか読んでも何書いてるのかほとんど分かりません．あんなので分かるのは予め分かってる人だけだろ．分からん人が読んで分かるような表現しろってんだ．
+</p></div>
+</div>
+<a name="15"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-15T00:00:00 (Sat)</h2>
+<h2 class="diary_title">真らき☆すた萌えドリル</h2>
+<div class="diary_body">
+<p class="diary">
+先日魔方陣でポイントが稼げるという机上の空論を持ち上げたばっかりなんですが，明らかに最もポイントが稼げるのは巫女祭壇でした．何回も成功させたら参拝者を15,000人くらいにすることが出来て，お布施うめぇｗｗｗｗということで簡単にポイントカンスト（99999ポイント）しました．先日の日記に惑わされた人がもし居れば（普通に考えていないだろうけど），ごめんなさい，素直に巫女祭壇を成功させて下さい (^ω^)
+</p></div>
+</div>
+<a name="15"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-15T00:00:01 (Sat)</h2>
+<h2 class="diary_title">まきまき7</h2>
+<div class="diary_body">
+<p class="diary">
+今回はサークル参加は見送ることにしました．どう考えても間に合いそうにないのと，あと学校とか進学とかの関連でサークル活動よりも優先順位の桁違いに高いことがいくつかありますので．
+</p></div>
+</div>
+<a name="15"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-15T00:00:02 (Sat)</h2>
+<h2 class="diary_title">こなたんファンタジー（仮）</h2>
+<div class="diary_body">
+<p class="diary">
+<a href="http://www.nicovideo.jp/watch/sm2652345" target="_blank" class="diary">(sm2652345) 自作の妄想FFをニコ厨という名の友人に視聴させる(仮)・第四話「黒幕」</a><br />
+<iframe width="312" height="176" src="http://www.nicovideo.jp/thumb/sm2652345" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2652345">【ニコニコ動画】自作の妄想FFをニコ厨という名の友人に視聴させる(仮)・第四話「黒幕」</a></iframe>
+</p>
+<p class="diary">
+新作ｋｔｋｒ！ (＞ワ＜)　なんかこのシリーズのタグに「こなたんファンタジー」というのがあるようなので，うちでもそれを仮として使います．
+</p>
+<p class="diary">
+ここで早くもひよりんが登場します．ジョブ「どうじんさっか」には吹いたｗ　初期のこなた同様いい感じにヘタレてくれてます．さすがインドア人間．
+</p>
+<p class="diary">
+あとあやのの扱いが酷い，黒い…というより別キャラ（朝倉涼子）になってるので純粋なあやのファンは要注意っす．
+</p></div>
+</div>
+<a name="16"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-16T00:00:00 (Sun)</h2>
+<h2 class="diary_title">Visual C++ 2005 Express Edition でのスタティックライブラリの作り方（リベンジ）</h2>
+<div class="diary_body">
+<p class="diary">
+先日スタティックライブラリの作り方を紹介した記事（<a href="http://kaosf.kirara.st/log/200802.html#29" class="diary">こちら</a>）を書きましたが，どうもこの方法ではリンク時にエラーが発生することがあります．そのエラーに関しても以前少々書いたのですが，主なものとしては LNK2005 というエラーです．
+</p>
+<p class="diary">
+で，厳密に原因を究明したわけではないのですが，これは「ライブラリは Debug も Release も考える必要ないじゃん」理論がマズいみたいなのです．というのも，「プロジェクトのプロパティ（Alt + F7 で開けるあれ） > 構成プロパティ > C/C++ > コード生成 > ランタイムライブラリ」の値が，ライブラリ側と使おうとしているプロジェクト側で一致していないと駄目みたいだからです．ここの値，Debug バージョンなら <b>マルチスレッド デバッグ DLL (/MDd)</b> に，Release バージョンなら <b>マルチスレッド DLL (/MD)</b> になるのです．
+</p>
+<p class="diary">
+で，自分でライブラリとプロジェクトのコード生成の値を不一致させるという実験をしてみました．が，同様のエラーを出すことは出来ませんでした．
+</p>
+<p class="diary">
+<b>warning LNK4098: defaultlib 'MSVCRTD' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。</b>
+</p>
+<p class="diary">
+という警告止まりでした．
+</p>
+<p class="diary">
+ちなみにあとよく分からないのが，ライブラリファイル（.lib ファイル）のサイズが妙に大きくなるというのは Release バージョンだけだったということです．Debug バージョンでは程よく小さくなってました．なんで？デバッグ用のコードとか情報が埋め込まれてることを考えると逆のような気がするんですけど(^^;
+</p>
+<p class="diary">
+まぁ，マズそうなのはそこだけでした．ライブラリをリンクさせる方法やインクルードパスを通す方法なんかは以前書いた記事の通りで大丈夫でした．てことで，これから玉子焼きうめえｗｗｗｗのためのライブラリ移植＆プロジェクト作成作業を再開しようと思います．また別のエラーが出たら，そのときはそのときっすよｗ
+</p></div>
+</div>
+<a name="18"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-18T00:00:00 (Tue)</h2>
+<h2 class="diary_title"><a href="http://www.new-akiba.com/archives/2008/03/peachpit_3.html" target="_blank" class="diary">PEACH-PIT「ローゼンメイデン」がヤングジャンプで復活!?</a>（<a href="http://www.new-akiba.com/" target="_blank" class="diary">にゅーあきばどっとこむ</a>）</h2>
+<div class="diary_body">
+<p class="diary">
+人生再開のお知らせｋｔｋｒ！
+</p></div>
+</div>
+<a name="19"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-19T00:00:00 (Wed)</h2>
+<h2 class="diary_title">金糸雀ン STG 製作日誌（日誌は嘘）</h2>
+<div class="diary_body">
+<p class="diary">
+ライブラリを作るときの「コード生成 > ランタイムライブラリ」の値を Debug で「マルチスレッドデバッグ DLL (MDd)」に，Release で「マルチスレッド DLL (MD)」にしましたが，やはり大量のリンクエラー（ともちろん警告も）が出て涙目でした．
+</p>
+<p class="diary">
+ここで改めて DX ライブラリでプロジェクトを作る方法を読み返してみました．すると，プロジェクト側のランタイムライブラリの値は Debug で「マルチスレッドデバッグ (MTd)」，Release で「マルチスレッド (MT)」にするらしいじゃないですか．てことで，早速ライブラリ側を変更．リビルドして，再びプロジェクトとリンク．
+</p>
+<p class="diary">
+結果，やはり大量のリンクエラー（ともちろん警告も）が出て俺 ＼(^o^)／ オワタでした．
+</p>
+<p class="diary">
+そして新しく出たエラーや警告をググル先生に尋ねてみたところ，どうも次に考えられるのは，extern "C" の関連じゃないかという可能性が出てきました．やばいですね，この機能は実は僕は使ったことがないのです．しかし，自分は今まで C++ のコードしか書いてないはず．それがどこかで勝手に C としてコンパイルされてる…？　…という感じに，また泥沼です．
+</p>
+<p class="diary">
+というか，もう一旦既存のプロジェクトは捨てて，新規プロジェクトとして 0 から作り直そうかとも思い始めてます．どうする小僧！？
+</p></div>
+</div>
+<a name="21"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-21T00:00:00 (Fri)</h2>
+<h2 class="diary_title">金糸雀ン STG のこと</h2>
+<div class="diary_body">
+<p class="diary">
+らちが明かないので 0 からプロジェクトを作り始めました．何を作るかが大事だって気付いたばっかりなのに，またこの男は性懲りもなくどう作るかにばかり拘っていたんですね．Visual C++ の使い方を覚えないといかん，と思ったのは悪くないけど，そっちに拘り過ぎてました．さっさと諦めてりゃ今頃どう考えてもとりあえず動くものなら作れてただろうに…　救いようがないです．
+</p>
+<p class="diary">
+と落ち込んでばかりもいられないので，暇な時間を見つけてはどんどん作り上げていこうと思います．まきまき 7 のある日にでもまた何か配布出来たらいいなぁ．
+</p></div>
+</div>
+<a name="24"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-24T00:00:00 (Mon)</h2>
+<h2 class="diary_title">Wii でエロゲ</h2>
+<div class="diary_body">
+<p class="diary">
+<a href="http://www.nicovideo.jp/watch/sm2548125" target="_blank" class="diary">(sm2548125) 【Wii】 お掃除戦隊くりーんきーぱー 【公式ホムペPVとオマケ】</a><br />
+<iframe width="312" height="176" src="http://www.nicovideo.jp/thumb/sm2548125" scrolling="no" style="border:solid 1px #CCC;" frameborder="0"><a href="http://www.nicovideo.jp/watch/sm2548125">【ニコニコ動画】【Wii】 お掃除戦隊くりーんきーぱー 【公式ホムペPVとオマケ】</a></iframe>
+</p>
+<p class="diary">
+Wii ハジマタ ＼(^o^)／
+</p>
+<p class="diary">
+残念ながらどう見てもエロゲです．魔女神判と言い，任天堂始まりすぎです．
+</p></div>
+</div>
+<a name="25"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-25T00:00:00 (Tue)</h2>
+<h2 class="diary_title">金糸雀ン STG のこと</h2>
+<div class="diary_body">
+<p class="diary">
+とりあえず画面中央に白い点を一つだけ描画するプログラム，という程度にまでレベルを落として，それからリンク時のエラーを起こさぬようコツコツ作っていたのですが，とうとうかつて作ったライブラリ内にあった仕組みが必要な段階にまでやって来ました．もちろん，ライブラリをリンクさせるとリンクエラーが出ます．そこで，別途作ったライブラリのリンク時にエラーが出るのなら，ライブラリのソースそのものをプロジェクトに組み込んでみようか，と思いソースとヘッダーをプロジェクト内に引っ張り込んで来ました．ライブラリとは言えまだまだせいぜい十数個のファイルなので，手作業でも十分にファイルのコピペは出来ました．
+</p>
+<p class="diary">
+で，リンクしてみると，エラー．<br />
+<b>libcpmtd.lib(xdebug.obj) : error LNK2019: 未解決の外部シンボル __malloc_dbg が関数 "void * __cdecl operator new(unsigned int,struct std::_DebugHeapTag_t const &,char *,int)" (??2@YAPAXIABU_DebugHeapTag_t@std@@PADH@Z) で参照されました。</b><br />
+この前の大量に出てきたエラーの中に LNK2019 もあったような気がします（メモってない orz）．しかし，ここでようやく確信しました．ライブラリそのものの方に問題があるのだと．
+</p>
+<p class="diary">
+ということで，コメントアウトを徹底的に繰り返し，とにかくエラーが出なくなるまで粘る．そして，怪しそうな箇所からコメントアウトを解禁していって…という実に初歩的な方法をとってとうとう原因を突き止めました．
+</p>
+<p class="diary">
+それはなんと「<b>あるライブラリのヘッダファイルに書かれた #include &lt;fstream&gt;</b>」でした．この include 文と，ifstream やら ofstream やらを使っている部分をコメントアウトする（※こちらは fstream がそもそもないのでコンパイルエラーが起こるため）だけで，リンクエラーは完全に消えました．
+</p>
+<p class="diary">
+ほんとに訳分かりません ／(^o^)＼
+</p>
+<p class="diary">
+でもヘッダファイルに #include &lt;fstream&gt; が書けないと色々と便利な自作ライブラリが使えなくなるので困ります．というか多分ゲーム作れませんｗ
+</p>
+<p class="diary">
+まぁ今日のところは原因が分かっただけでも良しとしますかね．
+</p></div>
+</div>
+<a name="28"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-28T00:00:00 (Fri)</h2>
+<h2 class="diary_title">研究室のマシンセットアップ</h2>
+<div class="diary_body">
+<p class="diary">
+研究室が決まってこの前部屋の掃除を済ませて，本日ようやく PC が割り当てられました．で，Windows XP のインストールやら SP2 の適用やら Cygwin のインストールやらを丸一日掛けてやりました．
+</p>
+<p class="diary">
+でもまだ終わってません．というか各種ドライバと Cygwin のインストールが手間取りすぎました．特に Cygwin の方．あんなの Windows のインストーラじゃないやい！爆発しろ！
+</p>
+<p class="diary">
+残ってるのは LaTeX と Ghostscript と J2SDK と Eclipse とウィルスバスター．…面倒臭すぎる orz
+</p></div>
+</div>
+<a name="29"></a>
+<div class="diary">
+<h2 class="diary_date_header">2008-03-29T00:00:00 (Sat)</h2>
+<h2 class="diary_title">うちのサイトの URL について</h2>
+<div class="diary_body">
+<p class="diary">
+実体は http://tamaran.sakura.ne.jp/ka/ なんですよね．でも，さくらインターネットの独自ドメインサービスで http://kaosf.kirara.st/ っていうのでも同じ所にアクセス出来るようにしてあるんです．なんでこんなことしてるかって，そしたら tamaran から独立した存在になれるじゃないですか．そして，さくらインターネットでなら後で別のスペースを借りても同じ URL でアクセス出来るように出来るじゃないですか．
+</p>
+<p class="diary">
+しかし，困ったことに…いや，それほど困らないとも言えますが，「かおすふぃーるど」でググって出てくるのは tamaran.sakura.ne.jp/ka/ の方なんですよね．kaosf.kirara.st/ の方が出てこないんですよ．もう自分としては kaosf.kirara.st/ の方が本物で， tamaran.sakura.ne.jp/ka/ でもアクセス出来ますよ，って解釈にしたいんですが，ググル先生はそれをお許しにならないようで orz
+</p>
+<p class="diary">
+まぁ別に移転の予定も必要もないので，実質何も困りはしないのですが (´∀｀)
+</p>
+<p class="diary">
+でも，もし kaosf.kirara.st/ の方で皆がブックマークなりリンクなりしてくれてたら，仮に移転するときに「リンクやブックマークの変更をお願いします」ってわざわざ言わなくても良いんですよね．勿体無いなぁ．</p></div>
+</div>
+<hr>
+<a href="./">戻る</a>
+<hr>
+</body>
+</html>
