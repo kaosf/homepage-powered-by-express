@@ -12,5 +12,9 @@
   },
   "scripts": {
     "postinstall": "node_modules/coffee-script/bin/coffee -c app.coffee routes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaosf/homepage-powered-by-express"
   }
 }
