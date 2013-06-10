@@ -1,4 +1,4 @@
-# My Homepage Powered by Express
+# My Homepage Powered by Express [![Build Status](https://travis-ci.org/kaosf/homepage-powered-by-express.png)](https://travis-ci.org/kaosf/homepage-powered-by-express)
 
 [kaosfield.net](http://kaosfield.net)
 
