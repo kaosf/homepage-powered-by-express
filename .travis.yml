@@ -11,6 +11,7 @@ after_success:
 - echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
 - yes | heroku keys:add
 - yes | git push heroku master
+- heroku keys:remove $(cat ~/.ssh/id_rsa.pub | awk '{print $3}')
 env:
   global:
   - secure: |-
