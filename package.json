@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "3.2.4",
     "jade": "0.30.0",
-    "coffee-script": "1.6.2"
+    "coffee-script": "1.6.2",
+    "marked": "0.2.9"
   },
   "scripts": {
     "postinstall": "node_modules/coffee-script/bin/coffee -c app.coffee routes"
