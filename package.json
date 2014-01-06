@@ -13,7 +13,7 @@
     "marked": "0.2.9"
   },
   "scripts": {
-    "postinstall": "node_modules/coffee-script/bin/coffee -c app.coffee routes.coffee"
+    "postinstall": "node_modules/coffee-script/bin/coffee -c app.coffee routes.coffee && node_modules/stylus/bin/stylus public/stylesheets/style.styl"
   },
   "repository": {
     "type": "git",
