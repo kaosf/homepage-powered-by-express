@@ -1,8 +1,8 @@
 # My Homepage Powered by Express
 
-[kaosfield.net](http://kaosfield.net)
+Hosted on Heroku; http://ka-express.herokuapp.com
 
-[on Heroku](http://ka-express.herokuapp.com)
+**I don't maintain this repository now.**
 
 ## References
 
